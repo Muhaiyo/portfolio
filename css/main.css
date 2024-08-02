@@ -214,14 +214,18 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    background-color: var(--dark-bg);
-    background-image: url('./../img/header-bg.png');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center center;
+    background: linear-gradient(270deg, #2a2fa9, #171718);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
 
     color: var(--header-text);
     text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .header__wrapper {
@@ -260,21 +264,22 @@ html, body {
 
 .btn {
     display: inline-block;
-    height: 48px;
-    padding: 12px 28px;
-
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(66, 72, 208);
     border-radius: 5px;
-    background-color: var(--accent);
-    color: var(--white);
-    letter-spacing: 0.15px;
-    font-size: 16px;
-    font-weight: 500;
-
-    transition: opacity 0.2s ease-in;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    opacity: 0.8;
+    background-color: rgb(5, 8, 66);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .btn:active {
